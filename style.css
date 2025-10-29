@@ -11,11 +11,12 @@
     --secondary-color: #101010;
     --tertiary-color: #939393;
     --quartenary-color: #1AFCB0;
-    /*
-    --title-font:;
-    --subtitle-font:;
-    --default-font:;
-    */
+    
+    /*ex: italic bold 16px Arial, sans-serif;*/
+    --title-font: normal 600 4rem Arial, sans-serif;
+    --subtitle-font: normal 600 2rem Arial, sans-serif;
+    --default-font: normal 400 1rem Arial, sans-serif;
+    
     --title-font-weight: 600;
     --subtitle-font: 600;
     --default-font-weight: 400;
