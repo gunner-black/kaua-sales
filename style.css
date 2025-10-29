@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root{
+    --primary-color: #FFFFFF;
+    --secondary-color: #101010;
+    --tertiary-color: #939393;
+    --quartenary-color: #1AFCB0;
+    /*
+    --title-font:;
+    --subtitle-font:;
+    --default-font:;
+    */
+    --title-font-weight: 600;
+    --subtitle-font: 600;
+    --default-font-weight: 400;
+    
+    --icon-size: 0.7rem;
+    --radius: 1rem;
+}
