@@ -6,37 +6,72 @@
   list-style: none;
 }
 
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/*font: italic small-caps bold 1.2em/1.5 sans-serif;*/
+/*default theme*/ 
 :root {
     --primary-color: #FFFFFF;
     --secondary-color: #101010;
-    --tertiary-color: #939393;
+    --tertiary-color: #E3E3E3;
     --quartenary-color: #1AFCB0;
     
     /*ex: italic bold 16px Arial, sans-serif;*/
-    --title-font: normal 600 4rem Arial, sans-serif;
-    --subtitle-font: normal 600 2rem Arial, sans-serif;
-    --default-font: normal 400 1rem Arial, sans-serif;
+    --title-font: normal 700 4rem "Pathway Extreme", sans-serif;
+    --title-2-font: normal 700 2rem "Pathway Extreme", sans-serif;
+    --subtitle-font: normal 400 1.2rem "Roboto", sans-serif;
+    --default-font: normal 400 1rem "Roboto", sans-serif;
     
     --title-font-weight: 600;
     --subtitle-font: 600;
     --default-font-weight: 400;
     
     --icon-size: 0.7rem;
-    --radius: 1rem;
+    --standard-spacing: 1rem;
 }
-body{
+body {
   background-color: var(--secondary-color);
 }
-
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4, h5 {
   color: var(--primary-color);
 }
-p{
-  color: var(--tertiary-color);
+h1{
+  font: var(--title-font);
+  overflow-wrap: break-word;
+  line-height: 1;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
 }
-a{
+h2{
+  font: var(--title-2-font);
+  overflow-wrap: break-word;
+  line-height: 1;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth";
+}
+span{
   color: var(--quartenary-color);
 }
+p {
+  color: var(--tertiary-color);
+  font: var(--default-font);
+  line-height: 1.4;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+}
+a {
+  color: var(--quartenary-color);
+}
+
+
+
 
 /*light theme*/
 @media (prefers-color-scheme: light) {
@@ -46,9 +81,20 @@ a{
     --tertiary-color: #767676;
     --quartenary-color: #009664;
   }
-  body{
-    background-color: var(--secondary-color);
-  }
+  body {background-color: var(--secondary-color);}
+  h1, h2, h3, h4, h5 {color: var(--primary-color);}
+  span{color: var(--quartenary-color);}
+  p {color: var(--tertiary-color);}
+  a {color: var(--quartenary-color);}
 }
 
-
+/*page structure*/
+main{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section{
+  margin: 0 var(--standard-spacing);
+}
