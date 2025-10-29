@@ -6,7 +6,7 @@
   list-style: none;
 }
 
-:root{
+:root {
     --primary-color: #FFFFFF;
     --secondary-color: #101010;
     --tertiary-color: #939393;
@@ -24,3 +24,31 @@
     --icon-size: 0.7rem;
     --radius: 1rem;
 }
+body{
+  background-color: var(--secondary-color);
+}
+
+h1, h2, h3, h4, h5{
+  color: var(--primary-color);
+}
+p{
+  color: var(--tertiary-color);
+}
+a{
+  color: var(--quartenary-color);
+}
+
+/*light theme*/
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary-color: #101010;
+    --secondary-color: #ffffff;
+    --tertiary-color: #767676;
+    --quartenary-color: #009664;
+  }
+  body{
+    background-color: var(--secondary-color);
+  }
+}
+
+
