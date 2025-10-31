@@ -255,10 +255,15 @@
 </section>
 </footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-$('.toggle-menu').click (function(){
-  $(this).toggleClass('activr');
-  $('#menu').toggleClass('open');
+$(document).ready(function() {
+    $('.toggle-menu').click(function() {
+        // Alterna a classe 'active' no botão do menu
+        $(this).toggleClass('active');
+        // Alterna a classe 'open' no div do menu
+        $('#menu').toggleClass('open');
+    });
 });
 </script>
 </html>

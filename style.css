@@ -102,6 +102,7 @@ body {
   margin: 0;
   padding: 0;
 }
+/*
 header{
   width: 100%;
   max-width: 800px;
@@ -192,6 +193,193 @@ nav div{
     }
   }
   
+}
+*/
+#header {
+  /* Garante que o header (e o botão) fiquem visíveis sobre o menu */
+  position: relative;
+  z-index: 1110; 
+}
+
+/* Variáveis SASS substituídas por valores */
+.toggle-menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  height: 50px;
+  outline: none;
+  padding: 0;
+  pointer-events: initial;
+  position: relative;
+  vertical-align: middle;
+  width: 50px;
+  z-index: 1110; 
+}
+
+.toggle-menu span {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 2px;
+  left: calc(50% - 13px );
+  position: absolute;
+  top: calc(50% - 1px );
+  transform-origin: 50% 50%;
+  transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,  transform 0.2s linear;
+  width: 26px;
+}
+
+.toggle-menu span:before, .toggle-menu span:after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  transform-origin: 50% 50%;
+  transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,  transform 0.2s linear;
+  width: 26px;
+}
+
+.toggle-menu span:before {
+  top: 7px;
+}
+
+.toggle-menu span:after {
+  top: -7px;
+}
+
+.toggle-menu.active span {
+  background-color: transparent;
+  transition: background 0.2s ease-out;
+}
+
+.toggle-menu.active span:before, .toggle-menu.active span:after {
+  transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
+}
+
+.toggle-menu.active span:before {
+  top: 0;
+  transform: rotate3d(0, 0, 1, -45deg);
+}
+
+.toggle-menu.active span:after {
+  top: 0;
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+
+
+/* Estilos do Menu (#menu) */
+#menu {
+  background: #DE4152;
+  color: #ffffff;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  transition: all 0.7s ease-in-out;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1100;
+}
+
+#menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Animação Keyframes (Falta no seu código original, mas é necessária para 'fadeInUp') */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Lógica de animação dos itens LI (precisa ser feita manualmente para CSS puro) */
+/* Devido à complexidade do loop SASS @for, vamos simplificar a animação: */
+#menu.open li {
+    animation-duration: 1.0s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+}
+#menu.open li:nth-child(1) { animation-delay: 0.1s; }
+#menu.open li:nth-child(2) { animation-delay: 0.2s; }
+#menu.open li:nth-child(3) { animation-delay: 0.3s; }
+#menu.open li:nth-child(4) { animation-delay: 0.4s; }
+
+
+#menu ul a {
+  -webkit-transform: translateZ(0);
+  transition: opacity 0.3s ease-in-out;
+}
+
+#menu ul:hover a {
+  opacity: 0.5;
+}
+
+#menu ul a:hover {
+  opacity: 1;
+}
+
+.main-nav {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #ffffff;
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 1rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.main-nav a:first-child {
+  padding-top: 0;
+}
+
+.menu-footer {
+  padding: 2rem;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.menu-footer ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-footer ul li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+.menu-footer a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 
