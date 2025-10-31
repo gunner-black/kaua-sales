@@ -120,6 +120,81 @@ nav{
 nav div{
   width: auto;
 }
+#menu {
+  text-align: center;
+  background-color: var(--secondary-color); opacity: 0;
+  height: 100%; width: 100%; left: 0; top: 0; z-index: 1000;
+  overflow: hidden; position: fixed; visibility: visible;
+  transition: all 0.7s ease-in-out;
+  
+  &.open {
+    opacity: 1; visibility: visible;
+    @for $i from 1 through 10 {li:nth-child(#{$i}) {animation-delay: $i*0.1s}}
+    li {animation-duration: 1.0s; animation-fill-mode: both; animation-name: fadeInUp;}
+  }
+  ul {&:hover {a {opacity: 0.5;}}
+    a {
+      -webkit-transform: translateZ(0);
+      transition: opacity 0.3s ease-in-out;
+      &:hover {opacity: 1;}
+    }
+  }
+  .main-nav {
+    position: relative; top: 50%; transform: translateY(-50%);
+    a {
+      color: var(--primary-color); font-weight: bold;
+      display: block; padding: 1rem;
+      text-decoration: none; text-transform: uppercase;
+      &:first {padding-top: 0;}
+    }
+  }
+  
+  .menu-footer{
+    padding: 2rem; bottom: 0; left: 0; right: 0; position: absolute;
+    ul {
+      list-style: none; display: inline-block; margin: 0; padding: 0;
+      li {display: inline; margin: 0 1rem;}
+    }
+    a {text-decoration: none; text-transform: uppercase;}
+  }
+}
+.toggle-menu{
+  background-color: transparent;
+  border: none; outline: none;
+  display: inline-block; position: relative; float: right; padding: 0;
+  height: 50px; width: 50px; vertical-align: middle; z-index: 1010;
+  cursor: pointer; pointer-events: initial;
+  span {
+    background-color: var(--primary-color);
+    content: "";
+    display: block; height: 2px; position: absolute;
+    left: calc(50% - 13px); top: calc(50% - 1px); width: 26px;
+    transform-origin: 50% 50%;
+    transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
+    
+    &:before, &:after {
+      background-color: var(--primary-color);
+      content: ""; display: block; width: 26px;
+      height: 2px; position: absolute;
+      transform-origin: 50% 50%;
+      transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
+    }
+    &:before {top: 7px;} &:after {top: -7px;}
+  }
+  &.active {
+    span {
+      background-color: transparent;
+      transition: background 0.2s ease-out;
+      &:before, &:after {transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
+      &:before {top: 0; transform: rotate3d(0, 0, 1, -45deg);}
+      &:after {top: 0;}
+      }
+    }
+  }
+  
+}
+
+
 main{
   width: 100%; max-width: 800px;
   display: flex; flex-direction: column;
