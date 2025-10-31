@@ -36,12 +36,8 @@
     --icon-size: 0.7rem;
     --standard-spacing: 1rem;
 }
-body {
-  background-color: var(--secondary-color);
-}
-h1, h2, h3, h4, h5 {
-  color: var(--primary-color);
-}
+
+h1, h2, h3, h4, h5 {color: var(--primary-color);}
 h1{
   font: var(--title-font);
   overflow-wrap: break-word;
@@ -67,9 +63,17 @@ p {
   font-variation-settings: "wdth" 100;
 }
 a {
+  font: var(--default-font);
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
   color: var(--quartenary-color);
 }
-
+time{
+  font: var(--default-font);
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
+  color: var(--primary-color);
+}
 
 
 
@@ -86,15 +90,25 @@ a {
   span{color: var(--quartenary-color);}
   p {color: var(--tertiary-color);}
   a {color: var(--quartenary-color);}
+  time{color: var(--primary-color);}
 }
 
 /*page structure*/
+body {background-color: var(--secondary-color);}
 main{
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-section{
-  margin: 0 var(--standard-spacing);
+section{margin: 0 var(--standard-spacing);}
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.text{
+  word-wrap: break-word;
+  gap: 0.4rem;
+  display: flex;
+  flex-direction: column;
 }
