@@ -13,6 +13,12 @@
     --tertiary-color: #E3E3E3;
     --quartenary-color: #1AFCB0;
     
+    --gradient-background: #4a4a4a;
+    --gradient-start: rgba(74, 74, 74, 1);
+    --gradient-mid: rgba(0, 43, 21, 1);
+    --gradient-end: rgba(0, 0, 0, 1);
+    --corner-gradient: 47deg;
+    
     /*ex: italic bold 16px Arial, sans-serif;*/
     --title-font: normal 700 4rem "Pathway Extreme", sans-serif;
     --title-2-font: normal 700 2rem "Pathway Extreme", sans-serif;
@@ -25,6 +31,11 @@
     
     --icon-size: 0.7rem;
     --standard-spacing: 1rem;
+}
+
+::selection {
+	background: var(--quartenary-color);
+  color: var(--primary-color);
 }
 
 h1, h2, h3, h4, h5 {color: var(--primary-color);}
@@ -88,6 +99,26 @@ body {
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column; align-items: center;
+  margin: 0;
+  padding: 0;
+}
+header{
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 1rem 0;
+  padding: 0rem 2rem;
+}
+nav{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+nav div{
+  width: auto;
 }
 main{
   width: 100%; max-width: 800px;
@@ -105,6 +136,35 @@ section{
   display: flex;
   gap: 0.4rem;
   flex-direction: column;
+}
+.scrolling-text-container {
+    margin: 0;
+    height: auto;
+    width: 100vw; overflow: hidden;
+    max-width: 800px;
+}
+.scrolling-text-track {
+    display: flex; white-space: nowrap;
+    animation: scroll-left 8s linear infinite;
+    width: 100%;
+    gap: 2rem;
+}
+.scrolling-text-container:hover .scrolling-text-track {animation-play-state: paused;}
+.text-item {
+    color: var(--quartenary-color);
+    opacity: 0.4;
+    font-size: 3rem; 
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-150%); 
+    }
 }
 .timeline{
   display: flex;
@@ -132,7 +192,13 @@ article{
   display: flex;
   flex-direction: column;
   align-content: center;
-  background-color: var(--tertiary-color);
+  background: var(--gradient-background);
+  background: linear-gradient(
+    var(--corner-gradient, 47deg), /* Opcional: fallback inline para o ângulo */
+    var(--gradient-start, #4a4a4a) 0%,
+    var(--gradient-mid, #002b15) 50%,
+    var(--gradient-end, #000000) 100%
+  );
   padding: var(--standard-spacing); border-radius: var(--standard-spacing);
 }
 figure{
