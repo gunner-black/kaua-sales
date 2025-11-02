@@ -44,6 +44,10 @@ p {
   font: var(--font-body);
   font-optical-sizing: auto;
 }
+
+/*page structure*/
+
+/*components*/
 .container {
 }
 .item {
@@ -64,6 +68,10 @@ p {
 .box{
   width: 100%;
   max-width: 300px;
+}
+.testimonials{
+  display: flex;
+  flex-direction: column;
 }
 
 #process {
