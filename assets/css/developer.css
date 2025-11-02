@@ -68,6 +68,7 @@ form{
   gap: 1rem;
   color: var(--primary-color);
   background-color: var(--quartenary-color);
+  font-family: 'Inter';
 }
 
 /*components*/
@@ -114,22 +115,81 @@ form{
 }
 
 /*form*/
+::placeholder {
+  font-size: 1rem;
+}
 textarea, input {
   background-color: transparent;
   width: 100%;
   padding: 1rem;
   border: 1px solid var(--secondary-color);
   border-radius: 1rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+textarea:focus, input:focus {
+  outline: none;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+select {
+  background-color: transparent;
+  width: 100%; padding: 1rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 1rem;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 1rem;
+  color: var(--accent-color);
+}
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.custom-select {
+  -webkit-appearance: none; -moz-appearance: none;
+  appearance: none; cursor: pointer; z-index: 1;
+}
+.custom-select-wrapper::after {
+  content: "+"; color: var(--accent-color); background-color: transparent;
+  height: 100%; top: 0; right: 0; padding: 10px 15px;
+  pointer-events: none;
+  position: absolute; z-index: 0;
+  display: flex; align-items: center;
 }
 .privacy {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 10px;
 }
-
 #privacy {
     width: auto;
 }
+input[type="checkbox"] {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: var(--tertiary-color);
+  border-radius: 1rem;
+  appearance: none;
+  border: none;
+}
+input[type="checkbox"]:checked {
+  background-color: var(--accent-color);
+}
+input[type="checkbox"]:before {
+  content: '\f058';
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--quartenary-color);
+}
+input[type="checkbox"]:checked:before {
+  color: var(--tertiary-color);
+}
+
+input[type="checkbox"]:checked + label {color: var(--accent-color);}
 .submit-whatsapp-button {
   width: 120px;
   height: auto;

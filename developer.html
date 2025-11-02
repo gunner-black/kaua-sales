@@ -180,25 +180,29 @@
   <form id="whatsapp-form" class="contact-form">
     <div class="group">
       <label for="name">Seu nome</label>
-      <input type="text" name="name" id="name" placeholder="escreva aqui" required/>
+      <input type="text" name="name" id="name" placeholder="Escreva aqui" required/>
     </div>
-    <div class="group">
+    
+    <div class="group custom-select-wrapper">
       <label for="type">Qual projeto você precisa?</label>
-      <select name="type" id="type" required>
+      <select name="type" id="type" class="custom-select" required>
         <option value="" disabled selected>Selecione seu projeto</option>
         <option value="Site Institucional">Site Institucional com SEO</option>
         <option value="Otimização SEO de Site">Otimização SEO de Site Existente</option>
         <option value="Outro Serviço">Outro Serviço</option>
       </select>
     </div>
+    
     <div class="group">
       <label for="message">Descreva sua necessidade principal</label>
       <textarea name="message" id="message" rows="4" placeholder="Ex: Preciso de um site institucional para uma empresa de serviços de engenharia."></textarea>
     </div>
+    
     <div class="group privacy">
       <input class="privacy" type="checkbox" name="privacy" id="privacy" required />
       <label for="privacy">Li e concordo com a Política de Privacidade.</label>
     </div>
+    
     <div class="group">
       <button id="submit" type="submit" class="submit-whatsapp-button">
         <p>Enviar</p><i class="fa-solid fa-paper-plane"></i>
