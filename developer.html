@@ -95,6 +95,7 @@
   <p class="hero-subtitle">Criação de Sites Institucionais Otimizados para o Google e Focados em Geração de Leads para sua Empresa.</p>
 </div>
 </section>
+
 <section id="beneficial">
 <div class="container">
   <h2 class="section-title">Por Que um Site com SEO é o Melhor Investimento para Sua Empresa?</h2>
@@ -123,6 +124,7 @@
   </div>
 </div>
 </section>
+
 <section id="process">
 <div class="container">
   <h2 class="section-title">Meu Método Exclusivo de Criação de Sites com SEO</h2>
@@ -149,6 +151,7 @@
   </div>
 </div>
 </section>
+
 <section id="successes">
 <div class="container">
   <h2>Resultados Reais. Clientes Satisfeitos</h2>
@@ -160,22 +163,24 @@
   </div>
 </div>
 </section>
+
 <section id="cta">
 <div class="container">
   <h2>Pare de Perder Clientes para a Concorrência!</h2>
   <p>Tenha um site que não só impressiona, mas também <span>atrai e converte visitantes em clientes fiéis</span>. O futuro do seu negócio começa aqui.</p>
 </div>
 </section>
+
 <section id="contact">
-<div class="containee">
-  <h2></h2>
+<div class="container">
+  <h2>About us</h2>
   <p></p>
 </div>
 <div class="container">
-  <form id="whastapp-form" class="contact-form">
+  <form id="whatsapp-form" class="contact-form">
     <div class="group">
       <label for="name">Seu nome</label>
-      <input type="text" name="name" id="id" placeholder="escreva aqui" required/>
+      <input type="text" name="name" id="name" placeholder="escreva aqui" required/>
     </div>
     <div class="group">
       <label for="type">Qual projeto você precisa?</label>
@@ -195,7 +200,7 @@
       <label for="privacy">Li e concordo com a Política de Privacidade.</label>
     </div>
     <div class="group">
-      <button type="submit" class="submit-whatsapp-button">
+      <button id="submit" type="submit" class="submit-whatsapp-button">
         Enviar <i class="fa-solid fa-paper-plane"></i>
       </button>
     </div>
@@ -204,5 +209,31 @@
 </section>
 </main>
 </body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('whatsapp-form');
+  const WHATSAPP_NUMBER = '5588994981636';
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const nome = document.getElementById('name').value.trim();
+    const projetoTipo = document.getElementById('type').value;
+    const mensagem = document.getElementById('message').value.trim();
+    let messageText = `Olá Kaua, sou ${nome}.`;
+    if (projetoTipo) {
+      messageText += ` Gostaria de um orçamento para: *${projetoTipo}*.`;
+    }
+    if (mensagem) {
+      messageText += `\n\nDetalhes do Projeto:\n${mensagem}`;
+    } else {
+      messageText += `\n\nAguardando seu contato para mais detalhes.`;
+    }
+    
+    const encodedMessage = encodeURIComponent(messageText);
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+    form.reset();
+  });
+});
+</script>
 <script src="/assets/script/animation.js"></script>
 </html>
