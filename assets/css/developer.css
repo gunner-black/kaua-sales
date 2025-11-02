@@ -10,6 +10,7 @@
   --primary-color: #f0f0f0;
   --secondary-color: #808080;
   --tertiary-color: #0F0F0F;
+  --quartenary-color: #242424;
   --accent-color: #7eff00;
   
   --font-title: normal 700 4rem 'Rajdhani', sans-serif;
@@ -42,4 +43,36 @@ h2{
 p {
   font: var(--font-body);
   font-optical-sizing: auto;
+}
+.container {
+}
+.item {
+  padding: 1rem;
+  width: 300px;
+  background-color: var(--quartenary-color);
+}
+#item-02 {
+  height: 300px;
+  background-color: var(--accent-color);
+}
+.card {
+  padding: 2rem;
+  width: 300px;
+  max-width: 400px;
+  background-color: var(--quartenary-color);
+}
+.box{
+  width: 100%;
+  max-width: 300px;
+}
+
+#process {
+  width: 100%;
+  max-width: 800px;
+}
+#process .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem 0;
 }
