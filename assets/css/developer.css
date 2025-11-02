@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root { /*default theme*/
+  --primary-color: #f0f0f0;
+  --secondary-color: #808080;
+  --tertiary-color: #0F0F0F;
+  --accent-color: #7eff00;
+  
+  --font-title: normal 700 4rem 'Rajdhani', sans-serif;
+  --font-subtitle: normal 700 2rem 'Rajdhani', sans-serif;
+  --font-body: normal 400 1rem 'Inter', sans-serif;
+}
+
+.rajdhani-semibold {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.rajdhani-bold {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.inter {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1{
+  font: var(--font-title);
+}
+h2{
+  font: 2rem var(--font-subtitle);
+}
+p {
+  font: var(--font-body);
+  font-optical-sizing: auto;
+}
