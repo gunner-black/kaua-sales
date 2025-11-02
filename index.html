@@ -25,6 +25,7 @@
 <link rel="icon" href="" title="" type="image/x-icon" />
 <!--stylization-->
 <link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="/assets/css/animation.css">
 <!--icones-->
 <script src="https://kit.fontawesome.com/557e4a1926.js" crossorigin="anonymous"></script>
 <!--fonts-->
@@ -129,7 +130,7 @@
 </section>
 -->
 <section id="about">
-  <div class="container">
+  <div class="container animate-while-rolling">
     <div>
      <p>&copy;sobre mim</p>
     </div>
@@ -138,13 +139,13 @@
     </div>
   </div>
   <div class="container text">
-    <p>Meu nome é Kauã Sales, e minha paixão profissional reside na intersecção entre Ciência dos Materiais para Hardware e Eletrônica Avançada.</p>
-    <p>Meu nome é Kauã Sales, e minha paixão profissional reside na intersecção entre Ciência dos Materiais para Hardware e Eletrônica Avançada.</p>
+    <p class="animate-while-rolling delay-1">Meu nome é Kauã Sales, e minha paixão profissional reside na intersecção entre Ciência dos Materiais para Hardware e Eletrônica Avançada.</p>
+    <p class="animate-while-rolling delay-2">Meu nome é Kauã Sales, e minha paixão profissional reside na intersecção entre Ciência dos Materiais para Hardware e Eletrônica Avançada.</p>
   </div>
 </section>
 <section id="training">
   <!--my education-->
-  <div class="container">
+  <div class="container animate-while-rolling">
     <div>
      <p>&copy;minhas experiências</p>
     </div>
@@ -152,10 +153,10 @@
       <h2>As minhas vivências </h2>
     </div>
   </div>
-  <ol class="timeline">
+  <ol class="timeline ">
     <li class="item">
       <div class="container"></div>
-      <div class="container text">
+      <div class="container text animate-while-rolling delay-1">
         <h3>Informática profissionalizante</h3>
         <time>Em agosto de 2022</time>
         <p>Realizou o curso profissionalizante de informática profissional</p>
@@ -163,7 +164,7 @@
     </li>
     <li class="item">
       <div class="container"><!--icon--></div>
-      <div class="container text">
+      <div class="container text animate-while-rolling delay-1">
         <h3>Escola Sustentável</h3>
         <time>Em janeiro de 2022</time>
         <p>Participou do projeto Selo Escola Sustentável da EEMTI Padre Luís Filgueiras como diretor de relações</p>
@@ -171,7 +172,7 @@
     </li>
     <li class="item">
       <div class="container"></div>
-      <div class="container text">
+      <div class="container text animate-while-rolling delay-3">
         <h3>Clube de Robótica</h3>
         <time>Em agosto de 2024</time>
         <p>Participou do clube de robótica da EEMTI Padre Luís Filgueiras</p>
@@ -179,7 +180,7 @@
     </li>
     <li class="item">
       <div class="container"><!--icon--></div>
-      <div class="container text">
+      <div class="container text animate-while-rolling delay-4">
         <h3>Engenharia de Materiais</h3>
         <time>Em agosto de 2025</time>
         <p>Começou a cursar engenharia de materiais na Universidade Federal do Cariri</p>
@@ -209,7 +210,7 @@
     </div>
   </div>
   <div class="cards">
-    <article class="project-card">
+    <article class="project-card animate-while-rolling delay-1">
       <figure>
         <img src="" alt="imagen card 1" loading="lazy" />
       </figure>
@@ -224,7 +225,7 @@
         </div>
       </div>
     </article>
-    <article>
+    <article class="project-card animate-while-rolling delay-2">
       <figure>
         <img src="" alt="imagen card 1" loading="lazy" />
       </figure>
@@ -283,5 +284,7 @@ $(document).ready(function() {
         $('#menu').toggleClass('open');
     });
 });
+
 </script>
+<script src="/assets/script/animation.js"></script>
 </html>
