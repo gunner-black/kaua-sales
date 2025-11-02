@@ -1,3 +1,13 @@
+function removerPreloader() {
+    const preloader = document.getElementById('preloader-overlay');
+    if (preloader) {
+        preloader.classList.add('hidden');
+        preloader.addEventListener('transitionend', function() {
+            preloader.remove();
+        });
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const elementosAnimar = document.querySelectorAll('.animate-while-rolling');
   const observerCallback = (entries, observer) => {
