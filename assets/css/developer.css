@@ -7,7 +7,8 @@
   border-style: none;
 }
 
-:root { /*default theme*/
+:root {
+  /*default theme*/
   --primary-color: #f0f0f0;
   --secondary-color: #808080;
   --tertiary-color: #0F0F0F;
@@ -26,11 +27,13 @@
   font-weight: 600;
   font-style: normal;
 }
+
 .rajdhani-bold {
   font-family: "Rajdhani", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
+
 .inter {
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -42,19 +45,23 @@ h1 {
   font: var(--font-title);
   line-height: 1;
 }
+
 h2 {
   color: var(--primary-color);
   font: var(--font-title-2);
 }
+
 h3 {
   color: var(--primary-color);
   font: var(--font-title-3);
 }
+
 p {
   color: var(--primary-color);
   font: var(--font-body);
   font-optical-sizing: auto;
 }
+
 span {
   color: var(--accent-color);
 }
@@ -65,7 +72,10 @@ body {
   display: flex;
   flex-direction: column;
 }
-form{
+
+main {width: 100%;}
+
+form {
   border-radius: 1rem;
   width: 100%;
   height: auto;
@@ -88,6 +98,7 @@ form{
   align-content: center;
   justify-content: center;
   width: 100%;
+
   .container {
     display: flex;
     flex-direction: column;
@@ -99,15 +110,19 @@ form{
     overflow-wrap: normal;
     text-wrap: balance;
   }
+  
   h1 {
     font-size: clamp(24px 2rem 48px);
   }
+  
   h1 span {
     color: var(--primary-color);
   }
+  
   #h1-emphasis {
-  color: var(--accent-color);
+    color: var(--accent-color);
   }
+  
   p {
     font-size: 1.2rem;
   }
@@ -116,6 +131,19 @@ form{
 #beneficial {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .section-title {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+#process {
+  background-color: #30865F;
+  width: 100%;
 }
 
 #contact {
@@ -125,10 +153,12 @@ form{
   flex-wrap: wrap;
   flex-direction: row;
 }
+
 #contact .container {
   width: 100%;
   max-width: 400px;
 }
+
 #contact .text {
   min-height: 400px;
   width: 100%;
@@ -139,9 +169,7 @@ form{
 }
 
 /*components*/
-.container {
-  
-}
+.container {}
 
 .item {
   display: flex;
@@ -157,23 +185,40 @@ form{
     margin-bottom: 1rem;
   }
 }
+
 #item-02 {
   height: auto;
   min-height: calc(100% + 300px);
   background-color: var(--accent-color);
   
-  span, h3, p {
+  span,
+  h3,
+  p {
     color: var(--tertiary-color);
   }
 }
 
-.card {
-  padding: 2rem;
-  width: 300px;
-  max-width: 400px;
-  background-color: var(--quartenary-color);
+.card {}
+
+.responsive-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
-.box{
+
+.grid-item {
+  height: auto;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--quartenary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+.box {
   width: 100%;
   max-width: 300px;
   display: flex;
@@ -184,15 +229,21 @@ form{
   gap: 1rem;
   border-bottom: 3px solid var(--accent-color);
 }
-.testimonials{
+
+.testimonials {
   display: flex;
   flex-direction: column;
 }
+
 .blur {
   background-color: var(--accent-color);
-  height: 80px; width: 80px; z-index: 0;
-  border-radius: 50%; filter: blur(70px);
+  height: 80px;
+  width: 80px;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(70px);
 }
+
 .num {
   font: var(--font-body);
   font-optical-sizing: auto;
@@ -200,10 +251,12 @@ form{
   font-size: 1.4rem;
   font-weight: bold;
 }
+
 #process {
   width: 100%;
   max-width: 800px;
 }
+
 #process .container {
   display: flex;
   flex-direction: row;
@@ -215,7 +268,9 @@ form{
 ::placeholder {
   font-size: 1rem;
 }
-textarea, input {
+
+textarea,
+input {
   background-color: transparent;
   width: 100%;
   padding: 1rem;
@@ -224,14 +279,18 @@ textarea, input {
   box-sizing: border-box;
   font-size: 1rem;
 }
-textarea:focus, input:focus {
+
+textarea:focus,
+input:focus {
   outline: none;
   color: var(--primary-color);
   border-color: var(--primary-color);
 }
+
 select {
   background-color: transparent;
-  width: 100%; padding: 1rem;
+  width: 100%;
+  padding: 1rem;
   border: 1px solid var(--secondary-color);
   border-radius: 1rem;
   box-sizing: border-box;
@@ -239,30 +298,46 @@ select {
   font-size: 1rem;
   color: var(--accent-color);
 }
+
 .custom-select-wrapper {
   position: relative;
   display: inline-block;
 }
+
 .custom-select {
-  -webkit-appearance: none; -moz-appearance: none;
-  appearance: none; cursor: pointer; z-index: 1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  z-index: 1;
 }
+
 .custom-select-wrapper::after {
-  content: "+"; color: var(--accent-color); background-color: transparent;
-  height: 100%; top: 0; right: 0; padding: 10px 15px;
+  content: "+";
+  color: var(--accent-color);
+  background-color: transparent;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding: 10px 15px;
   pointer-events: none;
-  position: absolute; z-index: 0;
-  display: flex; align-items: center;
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  align-items: center;
 }
+
 .privacy {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
 }
+
 #privacy {
-    width: auto;
+  width: auto;
 }
+
 input[type="checkbox"] {
   position: relative;
   width: 20px;
@@ -272,9 +347,11 @@ input[type="checkbox"] {
   appearance: none;
   border: none;
 }
+
 input[type="checkbox"]:checked {
   background-color: var(--accent-color);
 }
+
 input[type="checkbox"]:before {
   content: '\f058';
   font-family: "Font Awesome 5 Free";
@@ -282,22 +359,59 @@ input[type="checkbox"]:before {
   font-size: 1rem;
   color: var(--quartenary-color);
 }
+
 input[type="checkbox"]:checked:before {
   color: var(--tertiary-color);
 }
 
-input[type="checkbox"]:checked + label {color: var(--accent-color);}
+input[type="checkbox"]:checked+label {
+  color: var(--accent-color);
+}
+
 .submit-whatsapp-button {
   width: 120px;
   height: auto;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   background-color: var(--accent-color);
-  p, i {color: var(--tertiary-color); font-weight: bold;}
+
+  p,
+  i {
+    color: var(--tertiary-color);
+    font-weight: bold;
+  }
+  
   font-weight: bold;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .card-01 {
+    grid-column: span 2 / span 2;
+  }
+  
+  .card-02 {
+    grid-column-start: 3;
+  }
+  
+  .card-03 {
+    grid-row-start: 2;
+  }
+  
+  .card-04 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 2;
+    
+  }
 }
