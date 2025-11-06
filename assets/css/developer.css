@@ -150,6 +150,9 @@ main {width: 100%;}
       line-height: 1;
       margin-bottom: 1rem;
     }
+    p {
+      margin-bottom: 1rem;
+    }
   }
   #item-1, #item-3 {
     background-color: transparent;
