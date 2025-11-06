@@ -132,39 +132,46 @@ main {width: 100%;}
     height: auto;
     padding: 2rem;
     border-radius: 1rem;
+    z-index: 10;
+    overflow: hidden;
+    background-color: transparent;
+    
+    /*
+    border: 3px solid transparent;
+    background-color: 
+      linear-gradient(transparent transparent) padding-box,
+      linear-gradient(120deg, rgba(240, 240, 240, 0.3), rgba(36, 36, 36, 0.1)) border-box;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    */
+    backdrop-filter: blur(20px);
     
     h3 {
       line-height: 1;
       margin-bottom: 1rem;
     }
-    a {
-      
-    }
   }
-  #item-1 {
-    background:
-      linear-gradient(#242424) padding-box,
-      linear-gradient(135deg, rgba(128, 128, 128, 1) 0%, rgba(15, 15, 15, 0) 100%) border-box
-    ;
-    border: 3px solid transparent;
-    backdrop-filter: blur 10px;
+  #item-1, #item-3 {
+    background-color: transparent;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(36, 36, 36, 0.1)
+    );
   }
   #item-2 {
     background-color: var(--accent-color);
+    background-image: linear-gradient(
+      120deg,
+      rgba(207, 255, 83, 1),
+      rgba(126, 255, 0, 0.9)
+    );
     h3, span, p, a {
       color: var(--tertiary-color);
     }
     a {
       font-weight: bold;
     }
-  }
-  #item-3 {
-    border: 3px solid transparent;
-    background:
-      linear-gradient(#242424) padding-box,
-      linear-gradient(135deg, rgba(128, 128, 128, 1) 0%, rgba(15, 15, 15, 0) 100%) border-box
-    ;
-    backdrop-filter: blur 10px;
   }
 }
 .num {
@@ -256,6 +263,18 @@ main {width: 100%;}
   #card-4 { grid-area: 2 / 2 / 3 / 4; }
 
 
+/*components*/
+.blur {
+  background-color: var(--accent-color);
+  height: 80px;
+  max-height: 120px;
+  width: 200px;
+  max-width: 300px;
+  z-index: 1;
+  border-radius: 1rem;
+  filter: blur(70px);
+  position: relative; right: 0; top: -400px;
+}
 /*
 body {
   background-color: var(--tertiary-color);
