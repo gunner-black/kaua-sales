@@ -248,6 +248,11 @@ main {width: 100%;}
     background-color: var(--quartenary-color);
     border-radius: 1rem;
     padding: 2rem;
+    
+    i {
+      font-size: 1.3rem;
+      color: var(--accent-color);
+    }
   }
 }
 .responsive-grid {
