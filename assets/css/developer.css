@@ -192,6 +192,7 @@ main {width: 100%;}
       flex-direction: row;
       flex-wrap: nowrap;
       align-items: flex-end;
+      gap: 0;
     }
     .item {
       width: 100%;
@@ -221,6 +222,7 @@ main {width: 100%;}
       }
     }
     #item-3 {
+      width: 100%;
       border-radius: 0 1rem 1rem 0;
       border: 3px solid transparent;
       background:
