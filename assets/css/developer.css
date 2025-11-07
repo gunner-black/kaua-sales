@@ -185,6 +185,11 @@ main {width: 100%;}
   font-weight: bold;
 }
 @media (min-width: 1200px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   #beneficial {
     display: flex;
     flex-direction: column;
@@ -217,8 +222,8 @@ main {width: 100%;}
       backdrop-filter: blur 10px;
     }
     #item-2 {
-      width: 90%;
-      height: calc(auto + 3rem);
+      width: 85%;
+      height: calc(auto + 5rem);
       background-color: var(--accent-color);
       padding-top: 1rem;
       border-radius: 1rem 1rem 0 0;
