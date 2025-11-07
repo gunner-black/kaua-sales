@@ -250,12 +250,16 @@ main {width: 100%;}
     height: auto;
     max-height: 400px;
     background-color: var(--quartenary-color);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     padding: 2rem;
-    
     i {
       font-size: 1.3rem;
       color: var(--accent-color);
+      margin-bottom: 0.4rem;
+    }
+    h3 {
+      line-height: 1.2;
+      margin-bottom: 1rem;
     }
   }
 }
@@ -441,6 +445,9 @@ footer {
     text-align: center;
     p {
       font-weight: bold;
+      a {
+        color: var(--primary-color);
+      }
     }
   }
 }
