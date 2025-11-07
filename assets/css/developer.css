@@ -233,7 +233,6 @@ main {width: 100%;}
 }
 
 #process {
-  
   .responsive-grid {
     width: 100%;
     display: flex;
@@ -248,6 +247,8 @@ main {width: 100%;}
   .card {
     width: 300px;
     max-width: 350px;
+    height: auto;
+    max-height: 400px;
     background-color: var(--quartenary-color);
     border-radius: 1rem;
     padding: 2rem;
@@ -306,10 +307,20 @@ main {width: 100%;}
   align-items: center;
   .container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
-.contact-form {
+form {
   width: 100%;
+}
+.group {
+  width: 100%;
+}
+.contact-form {
+  width: 80%;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -339,6 +350,7 @@ main {width: 100%;}
   select {
     outline: none; font-size: 1rem;
     color: var(--secondary-color);
+    width: 100%;
   }
   .privacy {
     display: flex; flex-direction: row;
@@ -361,6 +373,21 @@ main {width: 100%;}
     color: var(--primary-color);
     border-color: var(--primary-color);
   }
+  input[type="text"] {
+    color: var(--secondary-color);
+    font: var(--font-body);
+  }
+  textarea {
+    color: var(--secondary-color);
+    font: var(--font-body);
+  }
+  input[type="text"]:focus {
+    color: var(--primary-color);
+  }
+  textarea:focus {
+    color: var(--primary-color);
+  }
+  
   input[type="checkbox"] {
     position: relative;
     width: auto; height: auto;
@@ -382,6 +409,39 @@ main {width: 100%;}
   }
   input[type="checkbox"]:checked+label {
     color: var(--accent-color);
+  }
+}
+
+footer {
+  .cookies {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    p {
+      width: 100%;
+      max-width: 500px;
+      padding: 2rem;
+      text-align: center;
+      a {
+        color: var(--accent-color);
+      }
+    }
+  }
+  .link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    li a{
+      color: var(--accent-color);
+    }
+  }
+  #copyright {
+    width: 100%;
+    padding: 3rem;
+    text-align: center;
+    p {
+      font-weight: bold;
+    }
   }
 }
 
