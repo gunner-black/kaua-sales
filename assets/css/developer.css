@@ -270,6 +270,35 @@ main {width: 100%;}
 #card-3 { grid-area: 2 / 1 / 3 / 2; }
 #card-4 { grid-area: 2 / 2 / 3 / 4; }
 
+#cta {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--accent-color);
+  padding: 4rem;
+  
+  .container {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 1.6rem;
+  }
+  h2, p, span{
+    color: var(--tertiary-color);
+  }
+  h2 {
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+  }
+  .btn {
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    background-color: var(--tertiary-color);
+    a {
+      color: var(--accent-color);
+    }
+  }
+}
 
 #contact {
   display: flex;
