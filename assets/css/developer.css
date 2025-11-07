@@ -384,6 +384,7 @@ form {
   textarea {
     color: var(--secondary-color);
     font: var(--font-body);
+    resize: none;
   }
   input[type="text"]:focus {
     color: var(--primary-color);
