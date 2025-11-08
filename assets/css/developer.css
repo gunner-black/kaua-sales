@@ -433,7 +433,7 @@ form {
   input[type="checkbox"]:before {
     content: '\f058'; font-family: "Font Awesome 5 Free";
     font-weight: bold; font-size: 1rem;
-    color: var(--quartenary-color);
+    color: var(--secondary-color);
   }
   input[type="checkbox"]:checked:before {
     color: var(--tertiary-color);
