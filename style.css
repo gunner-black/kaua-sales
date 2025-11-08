@@ -69,14 +69,14 @@ main{
 section{margin: 0 var(--standard-spacing);}
 article{
   width: 320px;
-  max-width: 800px;
+  max-width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-content: center;
   background: var(--gradient-background);
   background: linear-gradient(
-    var(--corner-gradient, 47deg),
+    var(--corner-gradient, 125deg),
     var(--gradient-start, #F2FF56) 0%,
     var(--gradient-mid, #7eff00) 70%,
     var(--gradient-end, #000000) 100%
@@ -129,23 +129,31 @@ footer{width: 100%; max-width: 800px;}
 }
 
 .container {display: flex; flex-direction: column;}
+
 .text {display: flex; flex-direction: column; gap: 0.4rem; word-wrap: break-word;}
+
 .header-nav {
   display: flex; flex-direction: row; justify-content: space-between; align-items: center;
-  padding: 1rem;width: 100%;
+  padding: 1rem; width: 100%;
 }
+
 .timeline {display: flex; flex-direction: column; gap: 2rem;}
+
 figure {
   width: 100%; height: auto;
   border-radius: var(--standard-spacing);
   overflow: hidden;
 }
+
 figure img {display: block; width: 100%; height: 100%; object-fit: cover;}
+
 .item {display: flex; flex-direction: row; width: 320px;}
 .item h3 {color: var(--quartenary-color);}
+
 #name a{
   font: var(--title-3-font);
 }
+
 .cards {
   display: flex; flex-direction: column; align-items: center;
   width: 100%; margin: 1rem 0; gap: var(--standard-spacing);
@@ -167,6 +175,7 @@ figure img {display: block; width: 100%; height: 100%; object-fit: cover;}
     animation: scroll-left 8s linear infinite;
 }
 .scrolling-text-container:hover .scrolling-text-track {animation-play-state: paused;}
+
 .text-item {
     color: var(--quartenary-color); opacity: 0.4; filter: blur(2px);
     font: var(--title-font);
@@ -220,10 +229,7 @@ figure img {display: block; width: 100%; height: 100%; object-fit: cover;}
 #menu.open li:nth-child(2) {animation-delay: 0.2s;}
 #menu.open li:nth-child(3) {animation-delay: 0.3s;}
 #menu.open li:nth-child(4) {animation-delay: 0.4s;}
-#menu ul a {
-  -webkit-transform: translateZ(0);
-  transition: opacity 0.3s ease-in-out;
-}
+#menu ul a {-webkit-transform: translateZ(0); transition: opacity 0.3s ease-in-out;}
 #menu ul:hover a {opacity: 0.5;}
 #menu ul a:hover {opacity: 1;}
 
