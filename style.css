@@ -86,7 +86,63 @@ article{
     color: var(--secondary-color);
   }
 }
-footer{width: 100%; max-width: 800px;}
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; 
+  max-width: 800px;
+  
+  #nav {
+    padding: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    ul {
+      gap: 1rem;
+      li {
+        width: 300px;
+        max-width: 600px;
+        border-bottom: 1px solid var(--quartenary-color);
+        margin-bottom: 1rem;
+        padding: 1rem;
+      }
+    }
+  }
+  
+  .cookies {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    p {
+      width: 100%;
+      max-width: 500px;
+      padding: 2rem;
+      text-align: center;
+      a {
+        color: var(--quartenary-color);
+      }
+    }
+  }
+  
+  .link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    li a{
+      color: var(--quartenary-color);
+    }
+  }
+  
+  #copyright {
+    width: 100%;
+    padding: 3rem;
+    text-align: center;
+    p {font-weight: bold;}
+  }
+}
 
 #hero {
   
@@ -137,7 +193,11 @@ footer{width: 100%; max-width: 800px;}
   padding: 1rem; width: 100%;
 }
 
-.timeline {display: flex; flex-direction: column; gap: 2rem;}
+.timeline {
+  display: flex; 
+  flex-direction: column; 
+  gap: 2rem;
+}
 
 figure {
   width: 100%; height: auto;
@@ -147,8 +207,18 @@ figure {
 
 figure img {display: block; width: 100%; height: 100%; object-fit: cover;}
 
-.item {display: flex; flex-direction: row; width: 320px;}
+.item {
+  display: flex; 
+  flex-direction: row; 
+  width: 320px;
+  
+  h3 {
+    color: var(--quartenary-color);
+  }
+}
+/*
 .item h3 {color: var(--quartenary-color);}
+*/
 
 #name a{
   font: var(--title-3-font);
@@ -158,9 +228,13 @@ figure img {display: block; width: 100%; height: 100%; object-fit: cover;}
   display: flex; flex-direction: column; align-items: center;
   width: 100%; margin: 1rem 0; gap: var(--standard-spacing);
   z-index: 10;
+  
+  .project-card {
+    h3 {color: var(--secondary-color);}
+    p {color: var(--secondary-color);}
+    span {color: var(--secondary-color)}
+  }
 }
-.project-card h3 {color: var(--secondary-color);}
-.project-card p {color: var(--secondary-color);}
 
 .blur {
   background-color: var(--quartenary-color);
@@ -169,12 +243,18 @@ figure img {display: block; width: 100%; height: 100%; object-fit: cover;}
 } 
 .blur:nth-child(2) {position: absolute; right: 0; top: 64%;}
 
-.scrolling-text-container {height: auto; width: 100vw; max-width: 800px; margin: 0; overflow: hidden; rotate: -2deg;}
+/*
+.scrolling-text-container {
+  height: auto; 
+  width: 100vw; max-width: 800px; 
+  margin: 0; overflow: hidden; rotate: -2deg;
+}
 .scrolling-text-track {
     display: flex; white-space: nowrap; width: 100%; gap: 2rem;
     animation: scroll-left 8s linear infinite;
 }
 .scrolling-text-container:hover .scrolling-text-track {animation-play-state: paused;}
+*/
 
 .text-item {
     color: var(--quartenary-color); opacity: 0.4; filter: blur(2px);
