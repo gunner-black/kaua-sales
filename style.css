@@ -150,6 +150,14 @@ footer{
 #about {
   display: flex; flex-direction: column;
   margin-bottom: 2rem; gap: var(--standard-spacing);
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    p {
+      line-height: 1.4;
+    }
+  }
 }
 #training {
   display: flex; flex-direction: column;
