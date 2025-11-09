@@ -7,8 +7,8 @@
 }
 
 :root { /*default theme*/
-    --primary-color: #FFFFFF;
-    --secondary-color: #101010;
+    --primary-color: #f0f0f0;
+    --secondary-color: #030303;
     --tertiary-color: #E3E3E3;
     --quartenary-color: #7eff00;
     --transparent-color: transparent; 
@@ -64,9 +64,92 @@ header {
 }
 main{
   width: 100%; max-width: 800px;
-  display: flex; flex-direction: column; gap: 2rem;
+  display: flex; flex-direction: column; gap: 6rem;
 }
 section{margin: 0 var(--standard-spacing);}
+#hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh; 
+  display: flex;
+  align-items: center;
+  
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem 1.2rem;
+    background-color: transparent;
+    background-image: linear-gradient(
+      120deg,
+      rgba(126, 255, 0, 0.5),
+      rgba(15, 15, 15, 0.7)
+    );
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-size: 2rem;
+    }
+    .at {
+      margin-bottom: 0.8rem;
+    }
+  }
+  .k-shape-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100%;
+  }
+  .k-geometric-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(
+      5.12% 3.83%, 
+      40.93% 3.83%, 
+      40.93% 39.3%, 
+      62.75% 3.83%, 
+      93.46% 3.83%, 
+      71.37% 50.68%, 
+      93.46% 97.52%, 
+      62.75% 97.51%, 
+      40.93% 62.04%, 
+      40.93% 97.5%, 
+      5.12% 97.51%);
+  }
+  .k-background-image {
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/img/profile.jpg);
+    background-size: cover;
+    background-position: center;
+    /* clip-path: inherit; */ 
+    opacity: 0.8;
+}
+}
+#about {
+  display: flex; flex-direction: column;
+  margin-bottom: 2rem; gap: var(--standard-spacing);
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    p {
+      line-height: 1.4;
+    }
+  }
+}
+#training {
+  display: flex; flex-direction: column;
+  gap: var(--standard-spacing);
+}
+#projects {
+  display: flex; flex-direction: column;
+  gap: var(--standard-spacing);
+}
 article{
   width: 320px;
   max-width: 100%;
@@ -111,6 +194,16 @@ footer{
       }
     }
   }
+  #social-media {
+    margin-bottom: 3rem;
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+  }
   
   .cookies {
     width: 100%;
@@ -143,31 +236,6 @@ footer{
     p {font-weight: bold;}
   }
 }
-
-#hero {
-  
-}
-#about {
-  display: flex; flex-direction: column;
-  margin-bottom: 2rem; gap: var(--standard-spacing);
-  .text {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    p {
-      line-height: 1.4;
-    }
-  }
-}
-#training {
-  display: flex; flex-direction: column;
-  gap: var(--standard-spacing);
-}
-#projects {
-  display: flex; flex-direction: column;
-  gap: var(--standard-spacing);
-}
-
 
 /*components*/
 #preloader-overlay {
