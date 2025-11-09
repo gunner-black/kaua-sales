@@ -326,6 +326,7 @@ main {width: 100%;}
     border-radius: 1rem;
     background-color: var(--tertiary-color);
     a {
+      font: var(--font-body);
       color: var(--accent-color);
     }
   }
