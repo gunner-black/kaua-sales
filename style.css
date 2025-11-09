@@ -143,7 +143,7 @@ section{margin: 0 var(--standard-spacing);}
   }
 }
 #training {
-  display: flex; flex-direction: column;
+  display: flex; flex-direction: column; align-items: center;
   gap: var(--standard-spacing);
 }
 #projects {
@@ -271,7 +271,8 @@ footer{
 
 .timeline {
   display: flex; 
-  flex-direction: column; 
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
 }
 
