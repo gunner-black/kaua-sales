@@ -43,7 +43,7 @@
 h1 { color: var(--accent-color); font: var(--font-title);}
 p { color: var(--primary-color); font: var(--font-body); font-optical-sizing: auto;}
 
-body { width: 100vw; background-color: var(--tertiary-color);}
+body { width: 100vw; display: flex; flex-direction: column; align-items: center; background-color: var(--tertiary-color);}
 main { display: flex; flex-direction: column; align-items: center; gap: 3.2rem; padding: 0.5rem;}
 
 .bio {
@@ -130,8 +130,11 @@ main { display: flex; flex-direction: column; align-items: center; gap: 3.2rem; 
     i { color: var(--secondary-color); font-size: 1rem;}
 }
 footer {
+    width: 100%;
+    max-width: 420px;
   .cookies {
     width: 100%;
+    max-width: 420px;
     display: flex;
     flex-direction: column;
     p {
