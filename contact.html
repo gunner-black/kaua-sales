@@ -42,6 +42,7 @@
 ::selection {background: var(--accent-color); color: var(--tertiary-color);}
 h1 { color: var(--accent-color); font: var(--font-title);}
 p { color: var(--primary-color); font: var(--font-body); font-optical-sizing: auto;}
+a { font: var(--font-body);}
 
 body { width: 100vw; display: flex; flex-direction: column; align-items: center; background-color: var(--tertiary-color);}
 main { display: flex; flex-direction: column; align-items: center; gap: 3.2rem; padding: 0.5rem;}
@@ -104,7 +105,11 @@ main { display: flex; flex-direction: column; align-items: center; gap: 3.2rem; 
             flex-direction: column;
             background-color: var(--quartenary-color);
             border: 1px solid var(--secondary-color);
-            a { color: var(--secondary-color); padding: 1rem 1.3rem; width: 100%; height: 100%;}
+            a { 
+                color: var(--secondary-color); 
+                font: var(--font-body);
+                padding: 1rem 1.3rem; 
+                width: 100%; height: 100%;}
             transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,  transform 0.2s linear;
         }
         .link-item:hover {
@@ -118,6 +123,9 @@ main { display: flex; flex-direction: column; align-items: center; gap: 3.2rem; 
             a { color: var(--tertiary-color);}
             background-color: var(--accent-color);
             background-image: linear-gradient( 120deg, rgba(207, 255, 83, 1), rgba(126, 255, 0, 0.9));
+        }
+        #developer:hover {
+            font-weight: bold;
         }
     }
 }
