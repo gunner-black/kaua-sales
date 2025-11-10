@@ -1,22 +1,216 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kauã Sales | Contato</title>
+<meta name="description" content="Engenheiro e Desenvolvedor Web. Todos os links, contatos e projetos de Kaua Sales em um só lugar.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kauasales.com/bio">
 
-<body>
-<header>
-  <nav><a href="#"><span>.</span>Kauã Sales</a></nav>
-</header>
-<main>
+<meta property="og:title" content="Kaua Sales | Contato">
+<meta property="og:description" content="Engenheiro e Desenvolvedor Web. Todos os links e projetos em um só lugar.">
+<meta property="og:type" content="profile">
+<meta property="og:image" content="https://kauasales.com/assets/img/profile-photo.jpg"> 
+<meta property="og:url" content="https://kauasales.com/bio">
+<!--icones-->
+<script src="https://kit.fontawesome.com/557e4a1926.js" crossorigin="anonymous"></script>
+<!--style-->
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border-style: none;
+}
+
+:root {
+  /*default theme*/
+  --primary-color: #f0f0f0;
+  --secondary-color: #808080;
+  --tertiary-color: #0F0F0F;
+  --quartenary-color: #242424;
+  --accent-color: #7eff00;
   
+  --font-title: normal 700 1.3rem "Pathway Extreme", sans-serif;
+  --font-title-2: normal 700 1.1rem "Pathway Extreme", sans-serif;
+  --font-subtitle: normal 400 1.2rem "Roboto", sans-serif;
+  --font-body: normal 400 1rem "Roboto", sans-serif;
+}
+::selection {background: var(--accent-color); color: var(--tertiary-color);}
+h1 { color: var(--accent-color); font: var(--font-title);}
+p { color: var(--primary-color); font: var(--font-body); font-optical-sizing: auto;}
+
+body { width: 100vw; background-color: var(--tertiary-color);}
+main { display: flex; flex-direction: column; align-items: center; gap: 3.2rem; padding: 0.5rem;}
+
+.bio {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    background-color: #121212;
+    width: 100%; max-width: 420px;
+    border-radius: 0.8rem;
+    
+    .perfil {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: no-wrap;
+        align-items: center;
+        align-content: flex-start;
+        gap: 1.2rem;
+        
+        #perfil-image {
+            width: 4rem; max-width: 6rem;
+            height: 4rem; max-height: 6rem;
+            border-radius: 2rem;
+            background-color: var(--accent-color);
+            background-image: 
+                url(/assets/img/perfil.png), 
+                linear-gradient(
+                    120deg,
+                    rgba(207, 255, 83, 1),
+                    rgba(126, 255, 0, 0.9)
+                )
+            ;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+    #description {
+        text-align: center;
+    }
+}
+.link-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        
+        .link-item {
+            width: 300px;
+            max-width: 420px;
+            border-radius: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--quartenary-color);
+            border: 1px solid var(--secondary-color);
+            a { color: var(--secondary-color); padding: 1rem 1.3rem; width: 100%; height: 100%;}
+            transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,  transform 0.2s linear;
+        }
+        .link-item:hover {
+            a { color: var(--accent-color);}
+            transform: scale(1.03);
+            box-shadow: 0 0px 8px var(--secondary-color);
+            font-weight: bold;
+        }
+        
+        #developer {
+            a { color: var(--tertiary-color);}
+            background-color: var(--accent-color);
+            background-image: linear-gradient( 120deg, rgba(207, 255, 83, 1), rgba(126, 255, 0, 0.9));
+        }
+    }
+}
+.link-social {
+    width: 300px;
+    max-width: 420px;
+    display: flex; flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    i { color: var(--secondary-color); font-size: 1rem;}
+}
+footer {
+  .cookies {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    p {
+      width: 100%;
+      max-width: 500px;
+      padding: 2rem;
+      text-align: center;
+      a {
+        color: var(--accent-color);
+      }
+    }
+  }
+  .link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    li a{
+      color: var(--accent-color);
+    }
+  }
+  #copyright {
+    width: 100%;
+    padding: 3rem;
+    text-align: center;
+    p {
+      font-weight: bold;
+      a {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+</style>
+</head>
+<body>
+<main>
+<div class="container bio">
+    <div class="perfil">
+        <div id="perfil-image"></div>
+        <div id="perfil-name">
+            <h1>Kauã Sales</h1><p>Engenheiro de Materiais</p>
+        </div>
+    </div>
+    <div id="description">
+        <p>Engenheiro | Desenvolvedor Web Full-Stack | Otimização de Sistemas.</p>
+    </div>
+</div>
+<div class="link-list">
+    <ul>
+        <li class="link-item" id="about"><a href="#"><i class="fa-solid fa-user"></i> Sobre Mim</a></li>
+        <li class="link-item" id="developer"><a href="#"><i class="fa-solid fa-code"></i> Crie o Seu Site</a></li>
+        <li class="link-item"><a href="#"><i class="fa-brands fa-linkedin"></i> Linkedin</a></li>
+        <li class="link-item"><a href="#"><i class="fa-brands fa-github"></i> GitHub</a></li>
+    </ul>
+</div>
+<div class="link-social">
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="#"><i class="fa-brands fa-github"></i></a>
+    <a href="#"><i class="fa-brands fa-discord"></i></a>
+    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+</div>
 </main>
 <footer>
-  
+<section id="cookies">
+<div class="container text cookies">
+    <p>Este site utiliza cookies para melhorar a sua experiência, <a href="/cookies.html">saiba mais</a>.</p>
+</div>
+<div class="container text">
+    <ul class="link">
+        <li><a href="/privacy.html">Termos de Privacidade</a></li>
+        <li><a href="/terms-of-use.html">Termos de Uso</a></li>
+    </ul>
+</div>
+</section>
+<section id="copyright">
+  <p><a href="/index.html">&copy; Kauã Sales 2025</a></p>
+</section>
 </footer>
 </body>
-
 </html>
