@@ -395,6 +395,53 @@ main {
       text-align: center;
     }
   }
+
+  .box {
+    width: 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 1px solid var(--secondary-color);
+    z-index: 10px;
+    background-color: transparent;
+    backdrop-filter: blur(12px);
+    gap: 1rem;
+
+    p {
+      line-height: 1.6;
+    }
+
+    span {
+      font: var(--font-body);
+      font-style: italic;
+      color: var(--primary-color);
+
+      a {
+        text-decoration: none;
+        color: var(--accent-color);
+      }
+    }
+
+    .quote {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      animation: flutuando 3s ease-in-out infinite;
+    }
+    i {
+      font-size: 3rem;
+      color: var(--accent-color);
+    }
+  }
+}
+@keyframes flutuando {
+  0% {transform: translateY(-10px);}
+  50% {transform: translateY(10px);}
+  100% {transform: translateY(-10px);}
 }
 
 #cta {
@@ -438,6 +485,20 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .link-social {
+    margin-top: 1rem;
+    width: 300px;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    i {
+      font-size: 0.8rem;
+      color: var(--primary-color);
+    }
   }
 }
 form {
@@ -561,6 +622,7 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     li a{
+      font: var(--font-body);
       color: var(--accent-color);
     }
   }
