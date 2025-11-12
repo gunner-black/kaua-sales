@@ -44,7 +44,18 @@ h1 { color: var(--accent-color); font: var(--font-title);}
 p { color: var(--primary-color); font: var(--font-body); font-optical-sizing: auto;}
 a { font: var(--font-body);}
 
-body { width: 100vw; display: flex; flex-direction: column; align-items: center; background-color: var(--tertiary-color);}
+html {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center; justify-content: center;
+}
+body { 
+    width: 100vw; 
+    display: flex; 
+    flex-direction: column; align-items: center; justify-content: center;
+    background-color: var(--tertiary-color);}
 main { display: flex; flex-direction: column; align-items: center; gap: 3.2rem; padding: 0.5rem;}
 
 .bio {
@@ -178,7 +189,11 @@ footer {
     }
   }
 }
-
+@media (min-height:800px) {
+    html {
+        height: 100%;
+    }
+}
 </style>
 </head>
 <body>
