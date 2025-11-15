@@ -20,8 +20,8 @@
     --corner-gradient: 47deg;
     
     /*ex: italic bold 16px Arial, sans-serif;*/
-    --title-font: normal 700 4rem "Pathway Extreme", sans-serif;
-    --title-2-font: normal 700 2rem "Pathway Extreme", sans-serif;
+    --title-font: normal 700 2rem "Pathway Extreme", sans-serif;
+    --title-2-font: normal 700 1.7rem "Pathway Extreme", sans-serif;
     --title-3-font: normal 700 1.35rem "Pathway Extreme", sans-serif;
     --subtitle-font: normal 400 1.2rem "Roboto", sans-serif;
     --default-font: normal 400 1rem "Roboto", sans-serif;
@@ -79,6 +79,100 @@ main{
 
 section{margin: 0 var(--standard-spacing);}
 #hero {
+  margin: 0;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  .content {
+    gap: 2rem;
+    width: 100%;
+    display: flex; flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    .perfil {
+      width: 100%;
+      max-width: 320px;
+      background-color: #121212;
+      border-radius: 0.8rem;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      text-align: center;
+      
+      #perfil-image {
+        width: 9rem; max-width: 12rem;
+        height: 9rem; max-height: 12rem;
+        border-radius: 30%;
+        background-color: var(--accent-color);
+        background-image: 
+          url(/assets/img/perfil.png), 
+          linear-gradient(120deg, rgba(207, 255, 83, 1), rgba(126, 255, 0, 0.9));
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      #perfil-name {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        
+        h1 {
+          color: var(--quartenary-color);
+        }
+        p {
+          text-align: center;
+          text-justify: inter-word;
+        }
+      }
+      
+      #perfil-links {
+        
+      }
+    }
+    .presentation {
+      width: 100%;
+      max-width: 320px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      
+      #presentation-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        a {
+          text-align: center;
+          width: 200px;
+          display: block;
+          padding: 0.5rem;
+          border-radius: 0.8rem;
+          border: solid 1px var(--primary-color);
+          color: var(--primary-color);
+        }
+        #btn-accent {
+          border: solid 1px var(--quartenary-color);
+          background-color: var(--quartenary-color);
+          color: #000;
+        }
+      }
+      #presentation-interests {
+        text-align: center;
+      }
+    }
+  }
+  /*
   position: relative;
   overflow: hidden;
   min-height: 80vh; 
@@ -91,10 +185,11 @@ section{margin: 0 var(--standard-spacing);}
     width: 100%;
     max-width: 500px;
     padding: 1rem 1.2rem;
+    border-radius: 0.8rem;
     background-color: transparent;
     background-image: linear-gradient(
       120deg,
-      rgba(126, 255, 0, 0.5),
+      rgba(126, 255, 0, 0.51),
       rgba(15, 15, 15, 0.7)
     );
     backdrop-filter: blur(8px);
@@ -136,11 +231,12 @@ section{margin: 0 var(--standard-spacing);}
     height: 100%;
     background-image: url(/assets/img/profile.jpg);
     background-size: cover;
-    background-position: center;
-    /* clip-path: inherit; */ 
-    opacity: 0.8;
+    background-position: center; /* clip-path: inherit; */ 
+    /*opacity: 0.8;
+  }
+  */
 }
-}
+
 
 #about {
   display: flex; flex-direction: column;
@@ -157,7 +253,7 @@ section{margin: 0 var(--standard-spacing);}
 
 #training {
   display: flex; flex-direction: column; 
-  gap: var(--standard-spacing);
+  gap: 3rem;
   .title {
     width: 100%;
     max-width: 320px;
@@ -336,7 +432,7 @@ footer{
         transform: translateX(-150%); 
     }
 }
-@keyframes fadeInUp { /*key frames*/
+@keyframes fadeInUp { 
   from {
     opacity: 0;
     transform: translate3d(0, 20px, 0);
@@ -420,6 +516,13 @@ footer{
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  
+  .item {
+    time {
+      font-size: 0.8rem;
+      color: #808080;
+    }
+  }
 }
 
 figure {
