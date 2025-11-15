@@ -34,7 +34,7 @@
     --standard-spacing: 1.2rem;
 }
 
-::selection {background: var(--quartenary-color); color: var(--primary-color);}
+::selection {background: var(--quartenary-color); color: var(--secondary-color);}
 
 h1{font: var(--title-font);line-height: 1;}
 h2{font: var(--title-2-font); line-height: 1;}
@@ -170,10 +170,44 @@ section{margin: 0 var(--standard-spacing);}
           border: solid 1px var(--quartenary-color);
           background-color: var(--quartenary-color);
           color: #000;
+          font-weight: bold;
         }
       }
       #presentation-interests {
-        text-align: center;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width: 100%;
+        
+        p {
+          color: #737373;
+          font-weight: bold;
+        }
+        
+        #line {
+          height: 1px;
+          width: 100%;
+          background-color: #121212;
+          margin: 1rem 0rem;
+        }
+        
+        .interests {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 0.8rem;
+          
+          span {
+            display: block;
+            width: auto;
+            padding: 0.5rem 0.7rem;
+            border-radius: 0.8rem;
+            color: #737373;
+            background-color: #121212;
+          }
+        }
       }
     }
   }
@@ -251,11 +285,12 @@ section{margin: 0 var(--standard-spacing);}
 }
 
 #about {
-  display: flex; flex-direction: column;
+  display: flex; flex-direction: column; align-items: center;
   margin-bottom: 2rem; gap: var(--standard-spacing);
   .text {
     display: flex;
     flex-direction: column;
+    width: 100%; max-width: 600px;
     gap: 1.2rem;
     p {
       line-height: 1.4;
@@ -275,6 +310,13 @@ section{margin: 0 var(--standard-spacing);}
 #projects {
   display: flex; flex-direction: column; align-items: center;
   gap: var(--standard-spacing);
+  
+  .title {
+    width: 100%;
+    max-width: 320px;
+    background-color: #A03E3E;
+  }
+  
   .container {
     width: 100%;
     max-width: 600px;
