@@ -15,7 +15,7 @@
   --quartenary-color: #242424;
   --accent-color: #7eff00;
   
-  --font-title: normal 700 2.4rem 'Rajdhani', sans-serif;
+  --font-title: normal 700 3rem 'Rajdhani', sans-serif;
   --font-title-2: normal 700 1.6rem 'Rajdhani', sans-serif;
   --font-title-3: normal 700 1.4rem 'Rajdhani', sans-serif;
   --font-subtitle: normal 700 1.2rem 'Rajdhani', sans-serif;
@@ -83,6 +83,84 @@ main {
 }
 
 #hero {
+  width: 100%; 
+  height: 80vh; max-height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  
+  .hero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+    .hero-initial {
+      width: 100%;
+      max-width: 400px;
+      
+     .typewriter {
+       color: var(--accent-color);
+     }
+    }
+    
+    .hero-middle {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      
+      .container {
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 2rem;
+        padding: 0.8rem 1rem;
+        background-color: transparent;
+        border: 1px solid var(--accent-color);
+        
+        h1 {
+          border-bottom: 1px solid #0B0B0B;
+          letter-spacing: 1px;
+          font-weight: normal;
+        }
+        h1, i {
+          font-size: 1rem;
+          color: var(--primary-color);
+        }
+      }
+    
+    
+    .hero-end {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      
+      p {
+        display: flex;
+        width: 300px;
+        font-size: 1rem;
+        padding: 2rem 0rem;
+        border-bottom: 1px solid var(--accent-color);
+      }
+      
+      i {
+        font-size: 1.2rem;
+        color: var(--primary-color);
+      }
+    }
+  }
+  }
+}
+/*
+#hero {
   width: 100%;
   height: 80vh;
   max-height: 800px;
@@ -130,6 +208,7 @@ main {
     font-size: 1.2rem;
   }
 }
+*/
 
 #beneficial {
   display: flex;
@@ -684,6 +763,7 @@ footer {
   filter: blur(70px);
   position: relative; right: 0; top: -400px;
 }
+
 /*
 body {
   background-color: var(--tertiary-color);

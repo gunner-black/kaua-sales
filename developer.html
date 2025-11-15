@@ -91,13 +91,35 @@
 <main>
 <section id="hero">
 <div class="container hero-content">
+  <div class="hero-initial">
+    <h1>A sua marca merece 
+      <a href="" class="typewrite" data-period="2000" data-type='[ "um site que vende", "crescer", "mais clientes"]'>
+        <span class="wrap"></span>
+      </a>
+    !</h1>
+  </div>
+  <div class="hero-middle">
+    <div class="container">
+      <h1>Com SEO ele alcança!</h1>
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </div>
+  <div class="hero-end">
+    <p class="hero-subtitle">Criação de Sites Institucionais Otimizados para o Google e Focados em Geração de Leads para sua Empresa.</p>
+    <i class="fa-solid fa-angle-down"></i>
+  </div>
+  <!--
   <h1>Seu negócio merece um site que vende. Com <span id="h1-emphasis"> SEO</span>, ele alcança!</h1>
   <p class="hero-subtitle">Criação de Sites Institucionais Otimizados para o Google e Focados em Geração de Leads para sua Empresa.</p>
+  -->
 </div>
+
+<!--
 <div class="scene">
   <div class="rocket"><img src="" alt="" /></div>
 </div>
 <div class="hero-image"></div>
+-->
 </section>
 
 <section id="beneficial">
@@ -269,6 +291,64 @@ document.addEventListener('DOMContentLoaded', function() {
     form.reset();
   });
 });
+</script>
+<script type="text/javascript" charset="utf-8">
+  var TxtType = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+  };
+  
+  TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+    
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+    
+    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+    
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+    
+    if (this.isDeleting) { delta /= 2; }
+    
+    if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+    }
+    
+    setTimeout(function() {
+      that.tick();
+    }, delta);
+  };
+  
+  window.onload = function() {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i = 0; i < elements.length; i++) {
+      var toRotate = elements[i].getAttribute('data-type');
+      var period = elements[i].getAttribute('data-period');
+      if (toRotate) {
+        new TxtType(elements[i], JSON.parse(toRotate), period);
+      }
+    }
+    
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+    document.body.appendChild(css);
+  };
 </script>
 <script src="/assets/script/animation.js"></script>
 </html>
