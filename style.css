@@ -111,6 +111,7 @@ section{margin: 0 var(--standard-spacing);}
       #perfil-image {
         width: 9rem; max-width: 12rem;
         height: 9rem; max-height: 12rem;
+        animation: flutuando 3s ease-in-out infinite;
         border-radius: 30%;
         background-color: var(--accent-color);
         background-image: 
@@ -120,10 +121,11 @@ section{margin: 0 var(--standard-spacing);}
         background-position: center;
         background-size: contain;
       }
+      
       #perfil-name {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.2rem;
         align-items: center;
         
         h1 {
@@ -136,6 +138,9 @@ section{margin: 0 var(--standard-spacing);}
       }
       
       #perfil-links {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
         
       }
     }
@@ -172,6 +177,9 @@ section{margin: 0 var(--standard-spacing);}
       }
     }
   }
+
+  
+
   /*
   position: relative;
   overflow: hidden;
@@ -236,7 +244,11 @@ section{margin: 0 var(--standard-spacing);}
   }
   */
 }
-
+@keyframes flutuando {
+        0% {transform: translateY(-10px)}
+        50% {transform: translateY(10px)}
+        100% {transform: translateY(-10px)}
+}
 
 #about {
   display: flex; flex-direction: column;
