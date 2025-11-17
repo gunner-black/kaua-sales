@@ -48,7 +48,7 @@
   --tertiary-color: #141414;
   --quartenary-color: #242424;
   --accent-color: #7eff00;
-  --extreme-color: #EB1319;
+  --extreme-color: #785AFF;
 }
 
 ::selection {background: var(--accent-color); color: var(--tertiary-color);}
@@ -543,36 +543,102 @@ main {
 }
 
 #cta {
+  position: relative;
   width: 100%;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--extreme-color);
-  padding: 4rem;
+  justify-content: center;
+}
+
+.cta-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  gap: 4rem;
   margin: 6rem 0 6rem 0;
+  background-color: transparent;
+  background: 
+      radial-gradient(circle at 20% 20%, rgba(57, 7, 157, 0.3), rgba(40, 20, 70, 0.2) 70%),
+      linear-gradient(135deg, #2a1f47 0%, #1b1430 100%);
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  
   
   .container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    max-width: 500px;
-    margin-bottom: 1.6rem;
+    max-width: 300px;
+    gap: 2rem;
+    z-index: 10;
+    
+    img {
+      width: 100%; max-width: 300px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: flutuando 3s ease-in-out infinite;
+    }
   }
+  
   h2, p, span{
-    color: var(--tertiary-color);
+    color: var(--primary-color);
+    z-index: 10;
   }
   h2 {
     line-height: 1.2;
     margin-bottom: 0.6rem;
   }
   .btn {
-    padding: 0.6rem 1rem;
-    border-radius: 1rem;
-    background-color: var(--tertiary-color);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
     a {
-      font: var(--font-body);
-      color: var(--accent-color);
+      display: block;
+      padding: 0.6rem 1rem;
+      border-radius: 1rem; border: 0px solid var(--secondary-color);
+      color: var(--primary-color); background: linear-gradient(120deg, rgba(126, 255, 0, 0.8), rgba(181, 255, 0, 0.3));
+      outline: none; box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.02);
+      rgba(126, 255, 0, 1)
+      backdrop-filter: blur(8px);
+    }
+    
+    #portfolio {
+      border-radius: 1rem; border: 0px solid var(--secondary-color);
+      color: #808080; background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      outline: none; box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(8px);
     }
   }
 }
+/*
+#cta::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background-image:
+     linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 2px),
+     linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 2px);
+   background-size: 22px 22px;
+   opacity: 0.5;
+}
+*/
+
 
 #me {
   width: 100%;
@@ -770,7 +836,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   #hero {
     .background {
       .filter {
@@ -893,7 +959,7 @@ footer {
 
 <section id="process">
 <div class="section-title">
-  <h2>Meu Método Exclusivo de Criação de Sites com SEO</h2>
+  <h2>Meu método exclusivo de criação de sites</h2>
 </div>
 <div class="filter-fade">
 <div class="container scrolling responsive-grid">
@@ -924,21 +990,22 @@ footer {
 </div>
 </section>
 
-<section id="cta">
-<div class="container">
-  <img src="" alt="" />
+<section id="cta" class="fade-out">
+<div class="cta-container">
+  <div class="container image">
+    <img src="/assets/img/smartphone-mockup.png" alt="" />
+  </div>
+  <div class="container">
+    <div class="content">
+      <h2>Pare de Perder Clientes para a Concorrência!</h2>
+      <p>Tenha um site que não só impressiona, mas também <span>atrai e converte visitantes em clientes fiéis</span>. O futuro do seu negócio começa aqui.</p>
+    </div>
+    <div class="content btn">
+      <a href="#">Criar meu site</a><a id="portfolio" href="#">Ver portfolio</a>
+    </div>
+  </div>
 </div>
 
-<div class="container">
-  <div class="content">
-    <h2>Pare de Perder Clientes para a Concorrência!</h2>
-    <p>Tenha um site que não só impressiona, mas também <span>atrai e converte visitantes em clientes fiéis</span>. O futuro do seu negócio começa aqui.</p>
-  </div>
-  <div class="content btn">
-    <a href="#">Criar meu site agora</a>
-    <a href="#">Portfólio</a>
-  </div>
-</div>
 </section>
 
 <section id="me">
