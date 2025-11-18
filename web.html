@@ -646,6 +646,16 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 1.2rem;
+  
+  .section-title {
+    width: 100%;
+    padding: 2rem;
+  
+    h2 {
+      text-align: center;
+    }
+  }
   
   .perfil {
     width: 300px;
@@ -654,14 +664,32 @@ main {
     align-items: center;
     justify-content: center;
     border-radius: 0.8rem;
-    background-color: var(--secondary-color);
+    background-color: #080808;
     padding: 3rem 2rem;
     gap: 1rem;
+    
+    text-align: center;
+    span {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+    a {
+      margin-top: 1rem;
+      display: block;
+      border-radius: 0.8rem;
+      color: #808080;
+      background-color: #141414;
+      padding: 0.5rem 1rem;
+    }
     
     .perfil-image {
       width: 6rem; max-width: 6rem;
       height: 6rem; max-height: 6rem;
-      border-radius: 50%;
+      margin-bottom: 1rem;
+      border-radius: 1rem;
       background-color: var(--accent-color);
       background-image: 
         url(/assets/img/perfil.png), 
@@ -1016,7 +1044,7 @@ footer {
     <div class="perfil-image">
     </div>
     <span>Kauã Sales</span>
-    <p>Engenharia de Materiais Eletrônicos e Ciência de Semicondutores para Hardware</p>
+    <p>Engenheiro | Desenvolvedor Web Full-Stack | Otimização de Sistemas</p>
     <a href="/contact.html">Conhecer</a>
   </div>
 </section>
