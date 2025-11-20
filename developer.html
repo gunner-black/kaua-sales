@@ -24,11 +24,862 @@
 <meta name="author" content="Kauã Sales" />
 <link rel="icon" href="" title="" type="image/x-icon" />
 <!--stylization-->
+<!--
 <link rel="stylesheet" href="/assets/css/developer.css"/>
+-->
 <!--icones-->
 <script src="https://kit.fontawesome.com/557e4a1926.js" crossorigin="anonymous"></script>
 <!--fonts-->
-<style>@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&family=Rajdhani:wght@600;700&display=swap');</style>
+<style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');</style>
+<style type="text/css" media="all">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border-style: none;
+}
+
+:root {
+  /*default theme*/
+  --primary-color: #f0f0f0;
+  --secondary-color: #808080;
+  --tertiary-color: #141414;
+  --quartenary-color: #242424;
+  --accent-color: #7eff00;
+  --extreme-color: #785AFF;
+}
+
+::selection {background: var(--accent-color); color: var(--tertiary-color);}
+
+.raleway-font {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+.open-sans-font {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--primary-color);
+}
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--primary-color);
+}
+h3 {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--primary-color);
+}
+p {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--primary-color);
+  font-variation-settings: "wdth" 100;
+}
+span {
+  color: var(--accent-color);
+}
+
+/*page structure*/
+body {
+  background-color: var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 9rem;
+  width: 100%;
+  
+}
+
+#hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 7rem;
+  
+  .background {
+    width: 100%;
+    height: auto;
+    background-image: url(/assets/img/2150378609.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    .filter {
+      width: 100%;
+      height: 120vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      
+      background: linear-gradient(0deg,rgba(20, 20, 20, 1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(20, 20, 20, 0) 100%);
+      
+      .container {
+        width: 100%;
+        height: 100vh;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30vw;
+        
+          .title {
+        
+            h1 { 
+              text-align: center;
+              width: 100%; max-width: 400px;
+              padding: 1rem; height: 200px;
+              font-weight: normal;
+              a { font-weight: 900;}
+            }
+          }
+          .search {
+            width: 300px; padding: 0.6rem 1.8rem;
+            display: flex; 
+            align-items: center; justify-content: space-between;
+            border-radius: 1rem; border: 0px solid var(--secondary-color);
+            color: var(--primary-color); background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            outline: none; box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(8px);
+          }
+          .roll {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            height: 3rem; width: 2rem; padding: 1.4rem 0.3rem 1rem 0.3rem;
+            border-radius: 1rem; border: 1px solid var(--primary-color);
+            background-color: transparent;
+            animation: flutuando 3s ease-in-out infinite;
+            backdrop-filter: blur(8px);
+            i { display: block; color: var(--primary-color);}
+          }
+      }
+    }
+  }
+  
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+      
+    p {
+      text-align: center;
+      display: flex;
+      width: 300px;
+    }
+  }
+}
+
+#beneficial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  .section-title {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    
+    h2 {
+      text-align: center;
+    }
+  }
+  .cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .item {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 0.4rem;
+    border-radius: 1rem;
+    z-index: 10;
+    overflow: hidden;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    
+    .num {
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 900;
+      font-style: normal;
+      z-index: 10;
+    }
+    h3 {
+      line-height: 1;
+      margin-bottom: 1rem;
+      z-index: 10;
+    }
+    p {
+      margin-bottom: 1rem;
+      z-index: 10;
+    }
+  }
+  #item-1, #item-3 {
+    background-color: transparent;
+    /*
+    background-image: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(36, 36, 36, 0.1)
+    );
+    */
+    background: 
+      radial-gradient(circle at 20% 20%, rgba(120, 90, 255, 0.55), rgba(40, 20, 70, 0.9) 70%),
+      linear-gradient(135deg, #2a1f47 0%, #1b1430 100%);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+  }
+  .item::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    width: 220px;
+    height: 220px;
+    background-image: 
+      linear-gradient(rgba(255,255,255,0.06) 1px, transparent 2px),
+      linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 2px)
+    ;
+    background-size: 22px 22px;
+    opacity: 0.30;
+  }
+  .item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(27, 20, 48, 0.4) 100%, transparent);
+    z-index: 1;
+  }
+  
+  #item-2 {
+    background-color: var(--accent-color);
+    background-image: linear-gradient(
+      120deg,
+      rgba(207, 255, 83, 1),
+      rgba(126, 255, 0, 0.9)
+    );
+    h3, span, p, a {
+      color: var(--tertiary-color);
+    }
+    a {
+      font-weight: bold;
+    }
+  }
+  #item-2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(150, 255, 29, 0.4) 100%, transparent);
+  z-index: 1;
+}
+  
+}
+.num {
+  font: var(--font-body);
+  font-optical-sizing: auto;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+@media (min-width: 1200px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #beneficial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .blur {
+      display: none;
+    }
+    .cards {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 0;
+    }
+    .item {
+      width: 100%;
+      height: 260px;
+      padding: 2rem;
+      z-index: 10;
+      overflow: hidden;
+      background-color: transparent;
+      backdrop-filter: blur(20px);
+    }
+    #item-1 {
+      border-radius: 1rem 0 0 1rem;
+      background:
+        linear-gradient(#242424) padding-box,
+        linear-gradient(135deg, rgba(128, 128, 128, 1) 0%, rgba(15, 15, 15, 0) 100%) border-box
+      ;
+      border: 3px solid transparent;
+      backdrop-filter: blur 10px;
+    }
+    #item-2 {
+      width: 85%;
+      height: 320px;
+      background-color: var(--accent-color);
+      padding-top: 1rem;
+      border-radius: 1rem 1rem 0 0;
+      
+      h3, span, p, a {
+        color: var(--tertiary-color);
+      }
+      a {
+        font-weight: bold;
+      }
+    }
+    #item-3 {
+      width: 100%;
+      border-radius: 0 1rem 1rem 0;
+      border: 3px solid transparent;
+      background:
+        linear-gradient(#242424) padding-box,
+        linear-gradient(135deg, rgba(128, 128, 128, 1) 0%, rgba(15, 15, 15, 0) 100%) border-box
+      ;
+      backdrop-filter: blur 10px;
+    }
+  }
+}
+
+#process {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  
+  .section-title {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    
+    h2 {
+      text-align: center;
+    }
+  }
+  
+  .filter-fade {
+    position: relative;
+    z-index: 14;
+  }
+  
+  .scrolling {
+    position: relative;
+    padding: 2rem;
+    width: 100%; max-width: 380px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    z-index: 10;
+    mask-image: linear-gradient(to right, 
+    rgba(20, 20, 20, 0) 0%,
+    #000000 25%, 
+    #000000 75%, 
+    rgba(20, 20, 20, 0) 100%
+    );
+  }
+  .scrolling::-webkit-scrollbar {
+    overflow-x: hidden;
+  }
+  .card {
+    flex: 0 0 300px;
+    width: 300px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    white-space: wrap;
+    border: 1px solid var(--secondary-color);
+    background-color: transparent;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(36, 36, 36, 0.1)
+    );
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    padding: 2rem;
+    i {
+      font-size: 1.3rem;
+      color: var(--accent-color);
+      margin-bottom: 0.4rem;
+    }
+    h3 {
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+#successes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  
+  .section-title {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    z-index: 10;
+    
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .box {
+    width: 320px; max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 1px solid var(--secondary-color);
+    z-index: 10;
+    background-color: transparent;
+    backdrop-filter: blur(12px);
+    gap: 1rem;
+
+    p {
+      line-height: 1.6;
+    }
+
+    span {
+      font: var(--font-body);
+      font-style: italic;
+      color: var(--primary-color);
+
+      a {
+        text-decoration: none;
+        color: var(--accent-color);
+      }
+    }
+
+    .quote {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      animation: flutuando 3s ease-in-out infinite;
+    }
+    i {
+      font-size: 3rem;
+      color: var(--accent-color);
+    }
+  }
+}
+@keyframes flutuando {
+  0% {transform: translateY(-10px);}
+  50% {transform: translateY(10px);}
+  100% {transform: translateY(-10px);}
+}
+
+#cta {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  gap: 4rem;
+  margin: 6rem 0 6rem 0;
+  background-color: transparent;
+  background: 
+      radial-gradient(circle at 20% 20%, rgba(57, 7, 157, 0.3), rgba(40, 20, 70, 0.2) 70%),
+      linear-gradient(135deg, #2a1f47 0%, #1b1430 100%);
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    gap: 2rem;
+    z-index: 10;
+    
+    img {
+      width: 100%; max-width: 300px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: flutuando 3s ease-in-out infinite;
+    }
+  }
+  
+  h2, p, span{
+    color: var(--primary-color);
+    z-index: 10;
+  }
+  h2 {
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+  }
+  .btn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+    a {
+      display: block;
+      padding: 0.6rem 1rem;
+      border-radius: 1rem; border: 0px solid var(--secondary-color);
+      color: var(--primary-color); background: linear-gradient(120deg, rgba(126, 255, 0, 0.8), rgba(181, 255, 0, 0.3));
+      outline: none; box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.02);
+      rgba(126, 255, 0, 1)
+      backdrop-filter: blur(8px);
+    }
+    
+    #portfolio {
+      border-radius: 1rem; border: 0px solid var(--secondary-color);
+      color: #808080; background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      outline: none; box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(8px);
+    }
+  }
+}
+/*
+#cta::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background-image:
+     linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 2px),
+     linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 2px);
+   background-size: 22px 22px;
+   opacity: 0.5;
+}
+*/
+
+
+#me {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  
+  .section-title {
+    width: auto;
+    padding: 2rem;
+  
+    h2 {
+      text-align: center;
+    }
+  }
+  
+  .perfil {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.8rem;
+    background-color: #080808;
+    padding: 3rem 2rem;
+    gap: 1rem;
+    
+    text-align: center;
+    span {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+    a {
+      margin-top: 1rem;
+      display: block;
+      border-radius: 0.8rem;
+      color: #808080;
+      background-color: #141414;
+      padding: 0.5rem 1rem;
+    }
+    
+    .perfil-image {
+      width: 6rem; max-width: 6rem;
+      height: 6rem; max-height: 6rem;
+      margin-bottom: 1rem;
+      border-radius: 1rem;
+      background-color: var(--accent-color);
+      background-image: 
+        url(/assets/img/perfil.png), 
+        linear-gradient(120deg, rgba(207, 255, 83, 1), rgba(126, 255, 0, 0.9));
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .link-social {
+    margin-top: 1rem;
+    width: 300px;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    i {
+      font-size: 0.8rem;
+      color: var(--primary-color);
+    }
+  }
+}
+form {
+  width: 100%;
+}
+.group {
+  width: 100%;
+}
+.contact-form {
+  width: 80%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  color: var(--primary-color);
+  font-family: 'Inter';
+  
+  label, input, textarea {
+    display: block;
+    width: 100%;
+  }
+  label {
+    margin-bottom: 0.8rem;
+  }
+  input, textarea, button, select {
+    border-radius: 0.6rem;
+    padding: 0.6rem 0.3rem;
+  }
+  input, textarea, select {
+    border: 3px solid var(--accent-color);
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    box-sizing: border-box;
+  }
+  select {
+    outline: none; font-size: 1rem;
+    color: var(--secondary-color);
+    width: 100%;
+  }
+  .privacy {
+    display: flex; flex-direction: row;
+    align-items: center; justify-content: center;
+    align-content: center; gap: 10px;
+  }
+  button {
+    display: flex; flex-direction: row;
+    align-items: center; justify-content: center;
+    width: 120px; height: auto;
+    border-radius: 1rem;
+    background-color: var(--accent-color);
+    p {
+      font-weight: bold;
+      color: var(--tertiary-color);
+    }
+  }
+  textarea:focus, input:focus {
+    outline: none;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  input[type="text"] {
+    color: var(--secondary-color);
+    font: var(--font-body);
+  }
+  textarea {
+    color: var(--secondary-color);
+    font: var(--font-body);
+    resize: none;
+  }
+  input[type="text"]:focus {
+    color: var(--primary-color);
+  }
+  textarea:focus {
+    color: var(--primary-color);
+  }
+  
+  input[type="checkbox"] {
+    position: relative;
+    width: auto; height: auto;
+    padding: 0.4rem;
+    border-radius: 1rem; appearance: none;
+    border: 1px solid var(--secondary-color);
+  }
+  input[type="checkbox"]:checked {
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+  }
+  input[type="checkbox"]:before {
+    content: '\f058'; font-family: "Font Awesome 5 Free";
+    font-weight: bold; font-size: 1rem;
+    color: var(--secondary-color);
+  }
+  input[type="checkbox"]:checked:before {
+    color: var(--tertiary-color);
+  }
+  input[type="checkbox"]:checked+label {
+    color: var(--accent-color);
+  }
+}
+
+footer {
+  .cookies {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    p {
+      width: 100%;
+      max-width: 500px;
+      padding: 2rem;
+      text-align: center;
+      a {
+        color: var(--accent-color);
+      }
+    }
+  }
+  .link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    li a{
+      font: var(--font-body);
+      color: var(--accent-color);
+    }
+  }
+  #copyright {
+    width: 100%;
+    padding: 3rem;
+    text-align: center;
+    p {
+      font-weight: bold;
+      a {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #hero {
+    .background {
+      .filter {
+        height: 80vh;
+        .container { gap: 8vw;}
+      }
+    }
+  }
+}
+
+</style>
 <!--site schema for search engines--> 
 <script type="application/ld+json">
 {
@@ -91,33 +942,31 @@
 <main>
 <section id="hero">
 <div class="background">
-    
-  <div class="bg-radials" aria-hidden="true"></div>
-  
   <div class="filter">
-    <div class="title">
-      <h1>sua marca merece <a class="typewrite" data-period="2000" data-type='[ "um site que vende", "crescer", "mais clientes"]'><span class="wrap"></span></a></h1>
-    </div>
-    
-    <div class="search">
-      <p>com SEO ele alcança</p>
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </div>
-    
-    <div class="roll">
-      <i class="fa-solid fa-arrow-down"></i>
+    <div class="container">
+      <div class="title">
+        <h1>sua marca merece <a class="typewrite" data-period="2000" data-type='[ "um site que vende", "crescer", "mais clientes"]'><span class="wrap"></span></a></h1>
+      </div>
+      <div class="search">
+        <p>com SEO ele alcança</p>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      
+      <div class="roll">
+        <i class="fa-solid fa-arrow-down"></i>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="content">
-  <p>Aqui criamos sites intitucionais otimizados para o Google e focados para geração de leads para sua marca</p>
+  <p style="color: #909090;">Criando sites intitucionais otimizados para o Google e focados para geração de leads para sua marca</p>
 </div>
 </section>
 
 <section id="beneficial">
 <div class="container section-title">
-  <h2>Por que um site com <span>SEO</span> é o melhor investimento para sua empresa?</h2>
+  <h2>Por que um site com <span>SEO</span> é o melhor investimento?</h2>
 </div>
 <div class="container cards">
   <div id="item-1" class="item">
@@ -142,7 +991,7 @@
 
 <section id="process">
 <div class="section-title">
-  <h2>Meu Método Exclusivo de Criação de Sites com SEO</h2>
+  <h2>Meu método exclusivo de criação de sites</h2>
 </div>
 <div class="filter-fade">
 <div class="container scrolling responsive-grid">
@@ -173,21 +1022,22 @@
 </div>
 </section>
 
-<section id="cta">
-<div class="container">
-  <img src="" alt="" />
+<section id="cta" class="fade-out">
+<div class="cta-container">
+  <div class="container image">
+    <img src="/assets/img/smartphone-mockup.png" alt="" />
+  </div>
+  <div class="container">
+    <div class="content">
+      <h2>Pare de Perder Clientes para a Concorrência!</h2>
+      <p>Tenha um site que não só impressiona, mas também <span>atrai e converte visitantes em clientes fiéis</span>. O futuro do seu negócio começa aqui.</p>
+    </div>
+    <div class="content btn">
+      <a href="#">Criar meu site</a><a id="portfolio" href="#">Ver portfolio</a>
+    </div>
+  </div>
 </div>
 
-<div class="container">
-  <div class="content">
-    <h2>Pare de Perder Clientes para a Concorrência!</h2>
-    <p>Tenha um site que não só impressiona, mas também <span>atrai e converte visitantes em clientes fiéis</span>. O futuro do seu negócio começa aqui.</p>
-  </div>
-  <div class="content btn">
-    <a href="#">Criar meu site agora</a>
-    <a href="#">Portfólio</a>
-  </div>
-</div>
 </section>
 
 <section id="me">
@@ -198,7 +1048,7 @@
     <div class="perfil-image">
     </div>
     <span>Kauã Sales</span>
-    <p>Engenharia de Materiais Eletrônicos e Ciência de Semicondutores para Hardware</p>
+    <p>Engenheiro | Desenvolvedor Web Full-Stack | Otimização de Sistemas</p>
     <a href="/contact.html">Conhecer</a>
   </div>
 </section>
