@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /contact.html
+Allow: /developer.html
+Disallow: /privacidade.html
+Disallow: /termos.html
+Disallow: /politica-cookies.html
+Disallow: /assets/
+Sitemap: https://kauasales.github.io/sitemap.xml
