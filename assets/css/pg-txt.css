@@ -5,14 +5,23 @@
   text-decoration: none;
   list-style: none;
 }
-h1 {
+
+h1, h2, h3, h4, p, a, ul, li{
+  display: block;
+}
+h1, h2, h3, h4, li {
   color: white;
 }
 p {
   color: white;
-  line-height: 1.4;}
+  line-height: 1.4;
+}
 a {
   color: #7eff00;
+}
+li {
+  list-style: normal;
+  list-style-type: decimal;
 }
 body{
   background-color: #101010;
@@ -27,13 +36,42 @@ header, main, footer {
   max-width: 800px;
   padding: 1rem;
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
+  
+  .data-revisao {
+    font-style: italic;
+  }
 }
 .text {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 1rem;
   word-wrap: break-word;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  
+  p {
+    text-align: center;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 }
