@@ -121,7 +121,7 @@ section{margin: 0 var(--standard-spacing);}
         border-radius: 30%;
         background-color: var(--accent-color);
         background-image: 
-          url(/assets/img/perfil.png), 
+          url(https://gunner-black.github.io/kaua-sales/assets/img/perfil.png), 
           linear-gradient(120deg, rgba(207, 255, 83, 1), rgba(126, 255, 0, 0.9));
         background-repeat: no-repeat;
         background-position: center;
